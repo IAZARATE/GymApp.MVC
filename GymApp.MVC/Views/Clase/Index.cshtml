@@ -1,0 +1,26 @@
+﻿@model IEnumerable<GymApp.MVC.Entidades.Clase>
+
+<h2>Horario de Clases</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.First().Nombre)</th>
+            <th>@Html.DisplayNameFor(model => model.First().Horario)</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.Nombre)</td>
+                <td>@Html.DisplayFor(modelItem => item.Horario)</td>
+                <td>
+                    <a asp-action="GestionarInscripcion" asp-route-id="@item.Id">Inscribirse</a> |
+                    <a asp-action="GestionarCancelacion" asp-route-id="@item.Id">Cancelar Inscripción</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

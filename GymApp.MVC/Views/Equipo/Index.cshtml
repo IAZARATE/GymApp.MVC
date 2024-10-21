@@ -1,0 +1,25 @@
+﻿@model IEnumerable<GymApp.MVC.Entidades.Equipo>
+
+<h2>Lista de Equipos</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Nombre)</th>
+            <th>@Html.DisplayNameFor(model => model.Estado)</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.Nombre)</td>
+                <td>@Html.DisplayFor(modelItem => item.Estado)</td>
+                <td>
+                    <a asp-action="GestionarReserva" asp-route-id="@item.Id">Reservar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

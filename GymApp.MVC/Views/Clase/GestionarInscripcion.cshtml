@@ -1,0 +1,16 @@
+﻿@model GymApp.MVC.Entidades.Clase
+
+<h2>Inscribirse a Clase</h2>
+
+<h4>@Model.Nombre - @Model.Horario</h4>
+
+<form asp-action="GestionarInscripcion">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <input type="submit" value="Confirmar Inscripción" class="btn btn-primary" />
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Volver al horario</a>
+</div>

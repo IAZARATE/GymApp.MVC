@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Inicio - ORT Fit";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Bienvenido a ORT Fit</h1>
+    <p class="lead">Tu compañero de fitness para una vida más saludable</p>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-4">
+        <h2>Clases</h2>
+        <p>Explora nuestra variedad de clases y encuentra la perfecta para ti.</p>
+        <a class="btn btn-primary" asp-controller="Clase" asp-action="Index">Ver Clases</a>
+    </div>
+    <div class="col-md-4">
+        <h2>Equipos</h2>
+        <p>Reserva nuestros equipos de última generación para tu entrenamiento.</p>
+        <a class="btn btn-primary" asp-controller="Equipo" asp-action="Index">Reservar Equipos</a>
+    </div>
+    <div class="col-md-4">
+        <h2>Membresía</h2>
+        <p>Únete a nuestra comunidad fitness o renueva tu membresía.</p>
+        <a class="btn btn-primary" asp-controller="Miembro" asp-action="Create">Registrarse</a>
+    </div>
+</div>
+
+<div class="mt-4">
+    <h3>¿Por qué elegir ORT Fit?</h3>
+    <ul>
+        <li>Instalaciones modernas y equipadas</li>
+        <li>Entrenadores profesionales y certificados</li>
+        <li>Variedad de clases para todos los niveles</li>
+        <li>Ambiente amigable y motivador</li>
+    </ul>
+</div>
